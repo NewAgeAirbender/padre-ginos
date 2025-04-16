@@ -130,7 +130,11 @@ function Order() {
           )}
         </form>
       </div>
-      {loading ? <h2>LOADING …</h2> : <Cart checkout={checkout} cart={cart} />}
+      {loading ? (
+        <h2>LOADING …</h2>
+      ) : (
+        <Cart checkout={checkout} cart={cart} text={selectedPizza.name} />
+      )}
     </div>
   );
 }
